@@ -167,6 +167,25 @@ Body:
 }
 ```
 
+- Status code: `400 Bad Request`
+
+Example: 
+``` 
+localhost:10000/task/3
+
+{
+"name_of_task": "Updated Task 3",
+}
+```
+
+Body:
+
+```
+{
+    "error": "Invalid request payload"
+}
+```
+
 - Status code: `404 Not Found`
 
 Body:
@@ -184,7 +203,7 @@ Method: `DELETE`
 
 **Response:**
 
-Status code: 200 OK
+Status code: `200 OK`
 
 Body:
 
