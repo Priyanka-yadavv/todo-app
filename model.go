@@ -1,7 +1,5 @@
 package main
 
-import "errors"
-
 func CreateInitialTasks() ([]Task, int) {
 	tasks := []Task{
 		{ID: 1, Name: "Create project proposal", Description: "Write a proposal for the new project", DueDate: "2022-02-01"},
@@ -15,7 +13,7 @@ func CreateInitialTasks() ([]Task, int) {
 }
 
 func getTasks() ([]Task, error) {
-	return tasks, nil
+	// your code goes here
 }
 
 func (t *Task) createTask() error {
@@ -26,43 +24,13 @@ func (t *Task) createTask() error {
 }
 
 func (t *Task) getTask() error {
-	id := t.ID
-	for _, task := range tasks {
-		if task.ID == id {
-			t.DueDate = task.DueDate
-			t.Name = task.Name
-			t.Description = task.Description
-			return nil
-		}
-	}
-	return errors.New("task not found")
+	// your code goes here
 }
 
 func (t *Task) updateTask() error {
-	id := t.ID
-	for index, task := range tasks {
-		if task.ID == id {
-			task.DueDate = t.DueDate
-			task.Name = t.Name
-			task.Description = t.Description
-			tasks[index] = task
-			return nil
-		}
-	}
-	return errors.New("task not found")
+	// your code goes here
 }
 
 func (t *Task) deleteTask() error {
-	id := t.ID
-	indexToBeDeleted := -1
-	for index, task := range tasks {
-		if task.ID == id {
-			indexToBeDeleted = index
-		}
-	}
-	if indexToBeDeleted == -1 {
-		return errors.New("task not found")
-	}
-	tasks = append(tasks[:indexToBeDeleted], tasks[indexToBeDeleted+1:]...)
-	return nil
+	// your code goes here
 }
